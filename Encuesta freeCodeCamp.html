@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Encuesta</title>
+	<style>
+		@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+
+		body {
+				background-color: rgb(0, 0, 36);
+				color: beige;
+				font-family: Poppins, Corbel, sans-serif;
+				background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)), url("survey-form-background.jpeg");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center center;
+		}
+
+		main {
+				width: 36em;
+				margin: auto;
+		}
+
+		.title {
+				text-align: center;
+		}
+
+		label {
+				display: block;
+				margin: 13px 5px;
+		}
+
+		.small-in-description {
+				font-size: 0.75em;
+		}
+
+		.name {
+				display: block;
+				height: 2em;
+				width: 17em;
+				border-radius: 0.4em;
+				font-family: Poppins, Corbel, sans-serif;
+				border-width: 0px;
+
+		}
+
+		.email {
+				display: block;
+				height: 2em;
+				width: 20em;
+				border-radius: 0.4em;
+				font-family: Poppins, Corbel, sans-serif;
+				border-width: 0px;
+
+		}
+
+		.number {
+				display: block;
+				height: 2em;
+				width: 4em;
+				border-radius: 0.4em;
+				font-family: Poppins, Corbel, sans-serif;
+				border-width: 0px;
+				
+		}
+
+		select {
+				display: block;
+				height: 2em;
+				width: 15em;
+				border-radius: 0.4em;
+				font-family: Poppins, Corbel, sans-serif;
+				border-width: 0px;
+		}
+
+		.submit {
+				display: block;
+				margin-left: 20px;
+				margin-bottom: 20px;
+				height: 3em;
+				width: 5em;
+				border-radius: 0.4em;
+				background-color: #37af65;
+				color: white;
+				font-family: Poppins, Corbel, sans-serif;
+				border-width: 0px;
+		}
+
+		.bio {
+				display: block;
+				border-radius: 0.4em;
+				font-family: Poppins, Corbel, sans-serif;
+				width: 38em;
+				height: 6em;
+				border-width: 0px;
+		}
+
+		.title-for-label {
+				font-size: 1.1em;
+				padding-bottom: 5px;
+		}
+
+		.survey-form {
+				background-color: rgba(26, 26, 54, 0.8);
+				border-radius: 1em;
+				padding: 3px;
+		}
+
+		fieldset {
+				border-width: 0px;
+		}
+
+		.creator {
+				text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1 class="title"id="title">Formulario de encuesta freeCodeCamp</h1>
+		<p id="description">Gracias por tomarse el tiempo para ayudarnos a mejorar la plataforma.</p>
+		<form class="survey-form" id="survey-form" action="">
+			<fieldset>
+				<label id="name-label" for="name">
+					<span class="title-for-label">Nombre</span>
+					<input class="name" id="name" type="text" required placeholder="Introduzca su nombre">
+				</label>
+
+				<label id="email-label" for="email">
+					<span class="title-for-label">Correo electrónico</span>
+					<input class="email" id="email" type="email" required placeholder="Introduzca su correo electrónico">
+				</label>
+
+				<label id="number-label" for="number">
+					<span class="title-for-label">
+						Edad <span class="small-in-description">(opcional)</span>
+					</span>
+					<input class="number" id="number" type="number" required min="13" max="120" placeholder="Edad">
+				</label>
+
+				<label for="dropdown">
+					<span class="title-for-label">
+						¿Qué opción describe mejor su función actual?
+					</span>
+					<select id="dropdown" name="">
+						<option value="0" disabled selected>
+							Selecciona tu rol actual
+						</option>
+						<option value="student">
+							Estudiante
+						</option>
+						<option value="full time job">
+							Trabajo a tiempo completo
+						</option>
+						<option value="full time learner">
+							Estudiante a tiempo completo
+						</option>
+						<option value="prefer not to say">
+							Prefiero no decirlo
+						</option>
+						<option value="other">
+							Otro
+						</option>
+					</select>
+				</label>
+
+				<label for="radio">
+					<span class="title-for-label">
+						¿Recomendarías freeCodeCamp a un amigo?
+					</span>
+					<div>
+						<input name="radio" type="radio" value="definitely" checked>Definitivamente
+
+					</div>
+					<div>
+						<input name="radio" type="radio" value="maybe">Tal vez
+
+					</div>
+					<div>
+						<input name="radio" type="radio" value="not sure">No estoy seguro
+
+					</div>
+				</label>
+
+				<label for="dropdown2">
+					<span class="title-for-label">
+						¿Cuál es tu función favorita de freeCodeCamp?
+					</span>
+					<select id="dropdown2" name="">
+						<option value="0" disabled selected>
+							Selecciona una opción
+						</option>
+						<option value="challenges">
+							Cambios
+						</option>
+						<option value="projects">
+							Proyectos
+						</option>
+						<option value="community">
+							Comunidad
+						</option>
+						<option value="open source">
+							Software libre
+						</option>
+					</select>
+				</label>
+
+				<label for="checkbox">
+					<span class="title-for-label">
+						¿Qué te gustaría ver mejorado? <span class="small-in-description">(Marque todo lo que corresponda)</span>
+					</span>
+					<div>
+						<input type="checkbox" name="checkbox" value="front-end_projects">
+						Proyectos Front-end
+					</div>
+					<div>
+						<input type="checkbox" name="checkbox" value="back-end_projects">
+						Proyectos Back-end
+
+					</div>
+					<div>
+						<input type="checkbox" name="checkbox" value="data_visualization">
+						Visualización de datos
+					</div>
+					<div>
+						<input type="checkbox" name="checkbox" value="challenges">
+						Cambios
+					</div>
+					<div>
+						<input type="checkbox" name="checkbox" value="open_source_community">
+						Comunidad de Software libre
+					</div>
+					<div>
+						<input type="checkbox" name="checkbox" value="gitter_help_rooms">
+						Salas de ayuda de Gitter
+					</div>
+					<div>
+						<input type="checkbox" name="checkbox" value="city_meetups">
+						Encuentros de la ciudad
+					</div>
+					<div>
+						<input type="checkbox" name="checkbox" value="wiki">
+						Wiki
+					</div>
+					<div>
+						<input type="checkbox" name="checkbox" value="forum">
+						Foros
+					</div>
+					<div>
+						<input type="checkbox" name="checkbox" value="additional_courses">
+						Cursos adicionales
+					</div>
+				</label>
+
+				<label for="bio">
+					<span class="title-for-label">
+						¿Algún comentario o sugerencia?
+					</span>
+					<textarea class="bio" id="bio" name="bio" placeholder="Escribe tu comentario aquí"></textarea>
+				</label>
+			</fieldset>
+			<input class="submit" id="submit" type="submit" value="Enviar">
+		</form>
+	</main>
+	<footer>
+		<p class="creator" id="creator">Created by Garbell Steek. 2023-04-04</p>
+	</footer>
+</body>
+</html>
